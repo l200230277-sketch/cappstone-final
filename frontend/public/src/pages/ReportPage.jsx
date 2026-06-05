@@ -58,7 +58,7 @@ function ReportPage({ onSubmit, onBack }) {
 
     const allowed = ['image/jpeg', 'image/png']
     if (!allowed.includes(file.type)) {
-      alert('Dokumentasi hanya boleh JPG atau PNG.')
+      alert('Dokumentasi hanya boleh JPG, PNG, atau JPEG.')
       e.target.value = ''
       return
     }
@@ -280,10 +280,10 @@ function ReportPage({ onSubmit, onBack }) {
             <div className="report-upload">
               <div className="report-upload__meta">
                 <p className="report-upload__title">
-                  Upload foto pendukung (JPG/PNG)
+                  Upload foto pendukung (JPG/PNG/JPEG)
                 </p>
                 <p className="report-upload__sub">
-                  Format: JPG, PNG • Maks. 5MB
+                  Format: JPG, PNG, JPEG • Maks. 5MB
                 </p>
               </div>
 
@@ -295,7 +295,7 @@ function ReportPage({ onSubmit, onBack }) {
                 id="doc"
                 className="report-upload__input"
                 type="file"
-                accept="image/png,image/jpeg"
+                accept="image/png,image/jpeg, image/jpg"
                 onChange={handleFile}
                 required
               />
