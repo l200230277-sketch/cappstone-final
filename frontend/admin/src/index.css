@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Global ADUIN admin — sage green + cream (dashboard design) */
+:root {
+  --aduin-bg-topleft: #eef8fb;
+  --aduin-bg-mid: #f2f7f5;
+  --aduin-bg-bottom: #e3efe9;
+  --aduin-sage: #5e8d7e;
+  --aduin-sage-dark: #3d6658;
+  --aduin-sage-soft: #a8c4b8;
+  --aduin-cream: #f3efe6;
+  --aduin-brown-dark: #ebe4d8;
+  --aduin-input-grey: #3a4540;
+  --aduin-brown-btn: #7aab9a;
+  --aduin-input: rgba(255, 255, 255, 0.85);
+  --aduin-input-border: rgba(94, 141, 126, 0.22);
+  --aduin-card-tan: #ffffff;
+  --aduin-text: #3a4540;
+  --aduin-muted: rgba(58, 69, 64, 0.72);
+  --aduin-shadow: 0 10px 28px rgba(62, 90, 78, 0.12);
+  --aduin-radius: clamp(14px, 3vw, 20px);
+  --aduin-radius-pill: 999px;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-logo: 'Permanent Marker', cursive;
+
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.35vw + 12px, 17px);
+  line-height: 1.45;
+  color: var(--aduin-text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: linear-gradient(
+    to bottom,
+    #f3e3d052 0%,
+    #aacddc45 50%,
+    #81a6c63d 110%
+  );
+}
+
+#root {
+  min-height: 100svh;
+  background: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Tombol & input — dipakai beberapa halaman */
+.aduin-btn {
+  border: none;
+  border-radius: var(--aduin-radius-pill);
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.aduin-btn:active {
+  transform: scale(0.98);
+}
+
+.aduin-btn--primary {
+  background: #3a9380;
+  color: #fff;
+  box-shadow: var(--aduin-shadow);
+}
+
+.aduin-btn--primary:hover {
+  filter: brightness(1.06);
+}
+
+.aduin-btn--tan {
+  background: var(--aduin-card-tan);
+  color: var(--aduin-brown-dark);
+  border: 1px solid var(--aduin-input-border);
+}
+
+.aduin-btn--tan:hover {
+  filter: brightness(1.05);
+}
+
+.aduin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.aduin-input {
+  width: 100%;
+  padding: clamp(0.75rem, 2vw, 0.95rem) clamp(1rem, 3vw, 1.2rem);
+  border-radius: var(--aduin-radius);
+  border: 1px solid var(--aduin-input-border);
+  background: var(--aduin-input);
+  color: var(--aduin-input-grey);
+  backdrop-filter: blur(6px);
+}
+
+.aduin-input::placeholder {
+  color: rgba(61, 35, 24, 0.55);
+}
+
+.aduin-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--aduin-text);
+  text-decoration: underline;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  cursor: pointer;
+}
+
+.aduin-link:hover {
+  opacity: 0.92;
+}

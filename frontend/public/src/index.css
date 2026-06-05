@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+/* Global ADUIN theme — sama dengan admin (warm gradient + tipografi) */
+:root {
+  --aduin-bg-topleft: #eef8fb;
+  --aduin-bg-mid: #f2f7f5;
+  --aduin-bg-bottom: #e3efe9;
+  --aduin-cream: #f5f0e6;
+  --aduin-sage: #5e8d7e;
+  --aduin-teal: #82bdb5;
+  --aduin-teal-dark: #5fa89f;
+  --aduin-logout: #d9a7a7;
+  --aduin-brown-dark: #D2C4B4;
+  --aduin-input-grey: rgb(77, 68, 68);
+  --aduin-brown-text: #3d2f2a;
+  --aduin-brown-btn: #82bdb5;
+  --aduin-input: rgba(255, 245, 230, 0.35);
+  --aduin-input-border: rgba(255, 255, 255, 0.25);
+  --aduin-card-tan: rgba(17, 92, 105, 0.45);
+  --aduin-text: #524c4c;
+  --aduin-muted: rgba(58, 69, 64, 0.72);
+  --aduin-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  --aduin-radius: clamp(12px, 3vw, 18px);
+  --aduin-radius-pill: 999px;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-logo: 'Permanent Marker', cursive;
+
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.35vw + 12px, 17px);
+  line-height: 1.45;
+  color: var(--aduin-text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: linear-gradient(
+    to bottom,
+    #f3e3d052 0%,
+    #aacddc45 50%,
+    #81a6c63d 110%
+  );
+}
+
+#root {
+  min-height: 100svh;
+  background: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
+}
+
+.aduin-btn {
+  border: none;
+  border-radius: var(--aduin-radius-pill);
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.aduin-btn:active {
+  transform: scale(0.98);
+}
+
+.aduin-btn--primary {
+  background: #3a9380;
+  color: #fff;
+  box-shadow: var(--aduin-shadow);
+}
+
+.aduin-btn--primary:hover {
+  filter: brightness(1.06);
+}
+
+.aduin-btn--tan {
+  background: var(--aduin-card-tan);
+  color: var(--aduin-brown-dark);
+  border: 1px solid var(--aduin-input-border);
+}
+
+.aduin-btn--tan:hover {
+  filter: brightness(1.05);
+}
+
+.aduin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.aduin-input {
+  width: 100%;
+  padding: clamp(0.75rem, 2vw, 0.95rem) clamp(1rem, 3vw, 1.2rem);
+  border-radius: var(--aduin-radius);
+  border: 1px solid var(--aduin-input-border);
+  background: var(--aduin-input);
+  color: var(--aduin-input-grey);
+  backdrop-filter: blur(6px);
+}
+
+.aduin-input::placeholder {
+  color: rgba(61, 35, 24, 0.55);
+}
+
+.aduin-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--aduin-text);
+  text-decoration: underline;
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+  cursor: pointer;
+}
+
+.aduin-link:hover {
+  opacity: 0.92;
+}
+
+.aduin-logo {
+  font-family: var(--font-logo);
+  color: var(--aduin-text);
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+
+.aduin-logo--large {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.aduin-logo--medium {
+  font-size: clamp(1.75rem, 5vw, 2.35rem);
+}
